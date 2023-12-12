@@ -27,7 +27,12 @@ public class Circle {
         return  true;
     }//spostaY
 
-    public Boolean puntoCerchio(){
-        Math.sqrt(Math.pow(punto.getX() - centro.getX(), 2) + Math.pow(punto.getY() - centro.getY(), 2)).
+    public Boolean puntoCerchio(Point point){
+       Double distanza=Math.sqrt(Math.pow(point.getX() - centrox, 2) + Math.pow(point.getY() - centroy, 2));
+       if(distanza<=raggio){
+           return true;
+       }else{
+           return false;
+       }
     }
 }
